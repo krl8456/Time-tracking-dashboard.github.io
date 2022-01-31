@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="styles.css">  
   <title>Frontend Mentor | Time tracking dashboard</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,66 +15,138 @@
   </style>
 </head>
 <body>
-
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
+  <main>
+    <div class="informations">
+      <header>
+        <img id="jeremy" src="images/image-jeremy.png" alt="Picture of man">
+        <div id="subheaders">
+          <h1>Report for</h1>
+          <h2>Jeremy Robson</h2>
+        </div>
+      </header>
+      <div id="period">
+        <span class="modes" id="daily">Daily</span>
+        <span class="modes" id="weekly">Weekly</span>
+        <span class="modes" id="monthly">Monthly</span>
+      </div>
+    </div>
+    
+    
+    <section class="parts">
+      <div class="subdiv" id="subdiv1">
+        <img class="icon" src="images/icon-work.svg" alt="briefcase">
+      </div>
+      <div class="maindiv">
+        <h3>Work</h3>
+        <img src="images/icon-ellipsis.svg" alt="three dots" class="dots">
+        <p class="hours">5hrs</p>
+        <p class="last">Last week - 7hrs</p>
+        <!-- 5hrs daily -->
+        <!-- Previous - 7hrs daily -->
+        <!-- 32hrs weekly -->
+        <!-- Previous - 36hrs weekly -->
+        <!-- 103hrs monthly -->
+        <!-- Previous - 128hrs monthly -->
+      </div>
+      
+    </section>
+    
+    <section class="parts">
+      <div class="subdiv" id="subdiv2">
+        <img class="icon" src="images/icon-play.svg" alt="console pad">
+      </div>
+      <div class="maindiv">
+        <h3>Play</h3>
+        <img src="images/icon-ellipsis.svg" alt="three dots" class="dots">
+        <p class="hours">1hr</p>
+        <p class="last">Last week - 2hrs</p>
+      </div>
+      <!-- 1hr daily -->
+      <!-- Previous - 2hrs daily -->
+      <!-- 10hrs weekly -->
+      <!-- Previous - 8hrs weekly -->
+      <!-- 23hrs monthly -->
+      <!-- Previous - 29hrs monthly -->
+    </section>
+ 
+    <section class="parts">
+      <div class="subdiv" id="subdiv3">
+        <img class="icon" src="images/icon-study.svg" alt="book">
+      </div>
+      <div class="maindiv">
+        <h3>Study</h3>
+        <img src="images/icon-ellipsis.svg" alt="three dots" class="dots">
+        <p class="hours">0hrs</p>
+        <p class="last">Last week - 1hrs</p>
+      </div>
+      <!-- 0hrs daily -->
+      <!-- Previous - 1hr daily -->
+      <!-- 4hrs weekly -->
+      <!-- Previous - 7hrs weekly -->
+      <!-- 13hrs monthly -->
+      <!-- Previous - 19hrs monthly -->
+    </section>
+   
+    <section class="parts">
+      <div class="subdiv" id="subdiv4">
+        <img class="icon" src="images/icon-exercise.svg" alt="running human">
+      </div>
+      <div class="maindiv">
+        <h3>Exercise</h3>
+        <img src="images/icon-ellipsis.svg" alt="three dots" class="dots">
+        <p class="hours">1hr</p>
+        <p class="last">Last week - 1hr</p>
+      </div>
+      <!-- 1hr daily -->
+      <!-- Previous - 1hr daily -->
+      <!-- 4hrs weekly -->
+      <!-- Previous - 5hrs weekly -->
+      <!-- 11hrs monthly -->
+      <!-- Previous - 18hrs monthly -->
+    </section>
+    
+    <section class="parts">
+      <div class="subdiv" id="subdiv5">
+        <img class="icon" src="images/icon-social.svg" alt="message bubble">
+      </div>
+      <div class="maindiv">
+        <h3>Social</h3>
+        <img src="images/icon-ellipsis.svg" alt="three dots" class="dots">
+        <p class="hours">1hr</p>
+        <p class="last">Last week - 3hrs</p>
+      </div>
+      <!-- 1hr daily -->
+      <!-- Previous - 3hrs daily -->
+      <!-- 5hrs weekly -->
+      <!-- Previous - 10hrs weekly -->
+      <!-- 21hrs monthly -->
+      <!-- Previous - 23hrs monthly -->
+    </section>
+    
+    <section class="parts">
+      <div class="subdiv" id="subdiv6">
+        <img class="icon" src="images/icon-self-care.svg" alt="hearth">
+      </div>
+      <div class="maindiv">
+        <h3>Self Care</h3>
+        <img src="images/icon-ellipsis.svg" alt="three dots" class="dots">
+        <p class="hours">0hrs</p>
+        <p class="last">Last week - 1hrs</p>
+      </div>
+      <!-- 0hrs daily -->
+      <!-- Previous - 1hr daily -->
+      <!-- 2hrs weekly -->
+      <!-- Previous - 2hrs weekly -->
+      <!-- 7hrs monthly -->
+      <!-- Previous - 11hrs monthly -->
+    </section>
+    
+  </main>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">krl8456</a>.
   </div>
+  <script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>
