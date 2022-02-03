@@ -23,12 +23,11 @@ html, body {
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin-top: 3%;
     color: white;
     background: var(--very-dark-blue);
     font-family: Rubik-Light;
-    margin-block: 3em;
     overflow-x: hidden;
 }
 main {
@@ -40,8 +39,10 @@ header, #period {
     display: flex;
     align-items: center;
 }
-header {
+header, #period, .icon, .maindiv {
     position: relative;
+}
+header {
     background-color: var(--blue);
     height: 7em;
     padding-left: 1em;
@@ -67,7 +68,6 @@ h2 {
     border-radius: 50%;
 }
 #period {
-    position: relative;
     column-gap: 10%;
     background-color: var(--dark-blue);
     height: 4em;
@@ -88,7 +88,6 @@ h2 {
     border-radius: 1em;
 }
 .icon {
-    position: relative;
     top: -1em;
     right: -11em;
     filter: grayscale(100%);
@@ -96,14 +95,14 @@ h2 {
 }
 .maindiv {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr minmax(0, 1fr);
     align-items: center;
-    top: -13em;
     background-color: var(--dark-blue);
     height: 3em;
     border-radius: 1em;
     padding: 1.5em 1em;
     line-height: 0%;
+    top: -2.5em;
 }
 .dots {
     margin-left: 6.5em;
@@ -133,78 +132,81 @@ h2 {
 #subdiv5 {
     background-color: var(--violet);
 }
-/* #maindiv5 {
-    top: -14em;
-} */
 #subdiv6 {
     background-color: var(--soft-orange);
-}
-.maindiv {
-    position: relative;
-    top: -2.5em;
 }
 .maindiv:hover {
     background-color: var(--blue);
     cursor: pointer;
     transition: 0.5s ease-in-out;
 }
-@media (min-width: 700px) {
+@media (min-width: 760px) {
     main {
         width: 90vw;
-        grid-template-rows: 2fr;
         grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 40% 40%;
         gap: 1.5em;
+    }
+    .informations {
+        position: relative;
+        top: -0.5em;
     }
     .grid-row-span-2 {
         grid-row: span 2;
     }
-    .informations {
-        display: flex;
-        flex-direction: column;
-    }
     header {
-        top: 0;
         height: 60%;
-        padding-top: 0;
-        flex-basis: 70%;
+        padding-top: 1.5em;
     }
     h2 {
         font-size: clamp(1.5em, 3vw, 2.5em);
     }
+    h3 {
+        margin-top: 4%;
+    }
+    h3 {
+        font-size: clamp(0.8em, 2vw, 1em);
+    }
+    #jeremy {
+        margin-bottom: 2em;
+    }
     #period {
-        flex-basis: 30%;
-        padding: 1em;
+        height: 36.5%;
+        padding-left: 8%;
         row-gap: 1em;
     }
     header, #period {
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
-    #jeremy {
-        margin-block: 1.5em;
-    }
-    .parts {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-    }
-    .subdiv {
-        
-    }
     .maindiv {
-        /* height: 70%; */
-        position: relative;
-        flex-basis: 70%;
-        top: 0%;
-        z-index: 3;
+        display: flex;
+        row-gap: 0;
+        flex-direction: column;
+        height: 8.5em;
+        align-items: flex-start;
     }
-    h3 {
-        font-size: clamp(0.5em, 1.3vw, 1.4em);
-    }
-    .last {
-        font-size: clamp(0.3em, 1vw, 1em);
+    .hours, .last, .dots {
+        position: absolute;
     }
     .hours {
-        font-size: clamp(0.7em, 2.5vw, 2em);
+        font-size: clamp(2.5em, 3vw, 3.5em);
+        padding-left: 0.2em;
+        padding-top: 0.3em;
+    }
+    .last {
+        grid-row-start: 3;
+        justify-self: flex-start;
+        font-size: clamp(0.8em, 1vw, 1.2em);
+        padding-left: 0.8em;
+        top: 70%
+    }
+    .dots {
+        right: 10%;
+    }
+    .icon {
+        right: -65%;
+        width: clamp(4em, 6vw, 7em);
     }
 }
