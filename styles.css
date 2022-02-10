@@ -33,7 +33,7 @@ html, body {
 main {
     display: grid;
     grid-template-rows: 1.2fr repeat(5, 1fr);
-    width: 18em;
+    width: min(90%, 18em);
 }
 header, #period {
     display: flex;
@@ -105,13 +105,13 @@ h2 {
     top: -2.5em;
 }
 .dots {
-    margin-left: 6.5em;
+    margin-left: 80%;
 }
 .hours {
     font-size: 2em;
 }
 .last {
-    font-size: 0.9em;
+    font-size: clamp(0.6em, 1.5vw, 0.9em);
     color: var(--desaturated-blue);
     justify-self: flex-end;
     margin-right: 0;
