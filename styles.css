@@ -24,6 +24,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-top: 3%;
     color: white;
     background: var(--very-dark-blue);
@@ -141,6 +142,9 @@ h2 {
     transition: 0.5s ease-in-out;
 }
 @media (min-width: 760px) {
+    html, body {
+        height: 100%;
+    }
     main {
         width: 90vw;
         grid-template-columns: repeat(4, 1fr);
